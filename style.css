@@ -1,0 +1,291 @@
+@font-face {
+    font-family: 'Ki-Regular';
+    src: url('Font/Ki-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ki-Light';
+    src: url('Font/Ki-Light.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ki-LightItalic';
+    src: url('Font/Ki-LightItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,
+body {
+    overscroll-behavior: none;
+    margin: 0;
+    height: 100%;
+    padding-bottom: 1vw;
+}
+
+body {
+    cursor: url('assets/pointer.png') 16 16, auto;
+}
+
+a:hover {
+    cursor: url('assets/pointer.png') 16 16, auto;
+    text-decoration: underline;
+}
+
+/* landing page */
+
+#landing-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: 9999;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 2.5s ease;
+    pointer-events: none;
+}
+
+#landing-page.fade-out {
+    opacity: 0;
+}
+
+#yellow {
+    color: #FFFF09;
+    font-family: 'Ki-Regular', Helvetica, sans-serif;
+    font-size: 1.5rem;
+    line-height: normal;
+}
+
+#white {
+    color: #FFF;
+    font-family: 'Ki-Regular', Helvetica, sans-serif;
+    font-size: 1.5rem;
+    line-height: normal;
+    margin-right: 0.75rem;
+}
+
+#blue {
+    color: #021AD2;
+    font-family: 'Ki-Regular', Helvetica, sans-serif;
+    font-size: 1.5rem;
+    line-height: normal;
+}
+
+/* homepage */
+
+.content {
+    font-family: 'Ki-Regular';
+    font-size: 1.5rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0vw;
+    height: 100vh;
+}
+
+.column1,
+.column2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.column1 {
+    background-image: url('/edited/image1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.column2 {
+    position: relative;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.writing-text {
+    position: relative;
+    z-index: 1;
+}
+
+.writing-text a {
+    color: #195bff;
+    font-family: 'Ki-Regular', Helvetica, sans-serif;
+    font-size: 1.5rem;
+}
+
+.writing-images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.writing-images img {
+    position: absolute;
+    max-width: 20vw;
+    height: auto;
+    transition: transform 0.5s ease;
+}
+
+#dog {
+    top: 7%;
+    left: 10%;
+    transform: scale(1.2) rotate(-10deg);
+}
+
+#statue {
+    top: 17%;
+    right: 0%;
+    transform: rotate(-10deg);
+}
+
+#andromeda {
+    bottom: -2%;
+    left: 20%;
+    transform: scale(1.7) rotate(35deg);
+}
+
+#dog:hover {
+    transform: scale(1.2) rotate(-5deg);
+}
+
+#statue:hover {
+    transform: rotate(-5deg);
+}
+
+#andromeda:hover {
+    transform: scale(1.7) rotate(30deg);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    font-family: inherit;
+}
+
+.yellow {
+    color: #FFFF09;
+    font-family: 'Ki-Regular', Helvetica, sans-serif;
+    font-size: 1.5rem;
+    line-height: normal;
+    text-decoration: none;
+}
+
+.blue {
+    color: #195bff;
+    font-family: 'Ki-Regular', Helvetica, sans-serif;
+    font-size: 1.5rem;
+    line-height: normal;
+    text-decoration: none;
+}
+
+/* photo page */
+body.photo {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    font-family: 'Ki-Regular', monospace, sans-serif;
+    overflow: hidden;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 3vw 2vw 1vw 2vw;
+    font-size: 1.5rem;
+}
+
+.photography {
+    color: #FFFF09;
+    /* Yellow */
+}
+
+.right {
+    display: flex;
+    gap: 2vw;
+}
+
+/* --- Image Placeholder --- */
+body {
+    margin: 0;
+    color: white;
+    font-family: 'Ki-Regular', monospace, sans-serif;
+}
+
+.image-placeholder {
+    position: relative;
+    width: 90vw;
+    height: 80vh;
+    margin: 0vh auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel1 {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* --- Arrows --- */
+.arrow {
+    position: absolute;
+    font-size: 4vw;
+    font-weight: 100;
+    background: none;
+    border: none;
+    color: white;
+    pointer-events: auto;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    z-index: 5;
+    transform: translate(-50%, -50%);
+    cursor: none;
+}
+
+/* --- Captions --- */
+.caption {
+    position: absolute;
+    color: white;
+    font-size: 1rem;
+    font-family: 'Ki-Regular', monospace, sans-serif;
+}
+
+.left-caption {
+    left: 1vw;
+    bottom: 2vh;
+}
+
+.right-caption {
+    right: 1vw;
+    bottom: 2vh;
+}
