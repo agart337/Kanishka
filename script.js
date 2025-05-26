@@ -6,8 +6,8 @@ window.addEventListener("load", function () {
     }, 2500);
 });
 
-// PHOTO CAROUSEL
 
+// PROJECT 1
 const wrapper = document.getElementById('imageWrapper');
 const image = document.getElementById('carouselImage');
 const prevArrow = document.getElementById('prevArrow');
@@ -67,8 +67,6 @@ function changeSlide(direction) {
     image.src = images[currentIndex];
 }
 
-// CAPTIONS
-
 // Captions for each image
 const captions = [
     { left: "Untitled, Slime mold on photograph, 2025", right: "Archival print on photo rag" },
@@ -100,4 +98,82 @@ function changeSlide(direction) {
     // Update captions
     leftCaption.textContent = captions[currentIndex].left;
     rightCaption.textContent = captions[currentIndex].right;
+}
+
+
+// PROJECT 2
+// === PROJECT 2 ===
+
+const wrapper2 = document.getElementById('imageWrapper2');
+const image2 = document.getElementById('carouselImage2');
+const prevArrow2 = document.getElementById('prevArrow2');
+const nextArrow2 = document.getElementById('nextArrow2');
+const leftCaption2 = document.getElementById('leftCaption2');
+const rightCaption2 = document.getElementById('rightCaption2');
+
+const images2 = [
+    "../raw2/Kanishka_Kanishka_01.jpg",
+    "../raw2/Kanishka_Kanishka_02.jpg",
+    "../raw2/Kanishka_Kanishka_03.jpg",
+    "../raw2/Kanishka_Kanishka_04.jpg",
+    "../raw2/Kanishka_Kanishka_05.jpg",
+    "../raw2/Kanishka_Kanishka_06.png",
+    "../raw2/Kanishka_Kanishka_07.jpg",
+    "../raw2/Kanishka_Kanishka_08.jpg"
+];
+
+const captions2 = [
+    { left: "Caption 1, 2024", right: "Medium 1" },
+    { left: "Caption 2, 2024", right: "Medium 2" },
+    { left: "Caption 3, 2024", right: "Medium 3" },
+    { left: "Caption 4, 2024", right: "Medium 4" },
+    { left: "Caption 5, 2024", right: "Medium 5" },
+    { left: "Caption 6, 2024", right: "Medium 6" },
+    { left: "Caption 7, 2024", right: "Medium 7" },
+    { left: "Caption 8, 2024", right: "Medium 8" }
+];
+
+let currentIndex2 = 0;
+
+wrapper2.addEventListener('mousemove', (e) => {
+    const rect = image2.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const isLeft = x < rect.width / 2;
+
+    const arrow = isLeft ? prevArrow2 : nextArrow2;
+    arrow.style.left = `${x}px`;
+    arrow.style.top = `${y}px`;
+    arrow.style.opacity = 1;
+
+    (isLeft ? nextArrow2 : prevArrow2).style.opacity = 0;
+});
+
+wrapper2.addEventListener('mouseleave', () => {
+    prevArrow2.style.opacity = 0;
+    nextArrow2.style.opacity = 0;
+});
+
+prevArrow2.addEventListener('click', (e) => {
+    e.stopPropagation();
+    changeSlide2(-1);
+});
+
+nextArrow2.addEventListener('click', (e) => {
+    e.stopPropagation();
+    changeSlide2(1);
+});
+
+function changeSlide2(direction) {
+    currentIndex2 += direction;
+
+    if (currentIndex2 < 0) {
+        currentIndex2 = images2.length - 1;
+    } else if (currentIndex2 >= images2.length) {
+        currentIndex2 = 0;
+    }
+
+    image2.src = images2[currentIndex2];
+    leftCaption2.textContent = captions2[currentIndex2].left;
+    rightCaption2.textContent = captions2[currentIndex2].right;
 }
