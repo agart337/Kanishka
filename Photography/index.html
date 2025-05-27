@@ -11,23 +11,37 @@
 </head>
 
 <body class="photo">
-    <div class="navbar yellow">
-        <div class="left">
+    <div class="navbar">
+        <div class="left yellow">
             <a href="index.html">Photography</a>
         </div>
         <div class="right">
             <div class="home">
                 <a href="../index.html">Home</a>
             </div>
-            <div class="aboutlink">
-                <a href="#about">About</a>
+            <div class="aboutlink yellow">
+                <a href="../About/index.html">About</a>
             </div>
         </div>
     </div>
     <div id="break"></div>
-    <div class="project1">
+
+    <div class="project-captions">
+        <div class="project-caption" data-target="project">
+            <a href="#project">Project 01</a>
+        </div>
+        <div class="project-caption" data-target="project1">
+            <a href="#project1">Project 02</a>
+        </div>
+        <div class="project-caption" data-target="project2">
+            <a href="#project2">Project 03</a>
+        </div>
+    </div>
+
+
+    <div id="project">
         <div class="image-placeholder" id="imageWrapper">
-            <img src="../raw/Kanishka_Kanishka_Surrender.jpg" alt="Project1" id="carouselImage" class="carousel1" />
+            <img src="../raw/Kanishka_Kanishka_Surrender.jpg" alt="Project" id="carouselImage" class="carousel" />
 
             <button class="arrow prev" id="prevArrow"><img src="../assets/back-arrow.svg"></button>
             <button class="arrow next" id="nextArrow"><img src="../assets/front-arrow.svg"></button>
@@ -38,9 +52,22 @@
     </div>
 
     <div class="break"></div>
-    <div class="project2">
+    <div id="project1">
+        <div class="image-placeholder" id="imageWrapper1">
+            <img src="../raw1/Kanishka_01.png" alt="Project1" id="carouselImage1" class="carousel1" />
+
+            <button class="arrow prev" id="prevArrow1"><img src="../assets/back-arrow.svg"></button>
+            <button class="arrow next" id="nextArrow1"><img src="../assets/front-arrow.svg"></button>
+
+            <div class="caption left-caption" id="leftCaption1">Untitled, 2024</div>
+            <div class="caption right-caption" id="rightCaption1">Medium</div>
+        </div>
+    </div>
+
+    <div class="break"></div>
+    <div id="project2">
         <div class="image-placeholder" id="imageWrapper2">
-            <img src="../raw2/Kanishka_Kanishka_01.jpg" alt="Project2" id="carouselImage2" class="carousel2" />
+            <img src="../raw2/Kanishka_Kanishka_08.jpg" alt="Project2" id="carouselImage2" class="carousel2" />
 
             <button class="arrow prev" id="prevArrow2"><img src="../assets/back-arrow.svg"></button>
             <button class="arrow next" id="nextArrow2"><img src="../assets/front-arrow.svg"></button>
@@ -49,25 +76,6 @@
             <div class="caption right-caption" id="rightCaption2">Medium</div>
         </div>
     </div>
-
-
-    <div class="break"></div>
-    <div class="about">
-        <div class="image-placeholder">
-            <img src="../raw3/Kanishka website image.png" class="carousel1" style="opacity: 80%;" />
-
-            <div class="caption left-caption">
-                Email: purik587@newschool.edu
-                <br>
-                Request for full portfolio here
-            </div>
-            <div class="caption right-caption">Kanishka is an NYC-based conceptual artist and writer, who works with
-                non-human biological systems to further her research in feminist-futurism. She is pursuing a Master of
-                Fine Arts in Photography at Parsons School of Design, where she is developing her practice to produce
-                multimedia interdisciplinary work. </div>
-        </div>
-    </div>
-
     <div id="break"></div>
     <script src="../script.js" async defer></script>
 </body>

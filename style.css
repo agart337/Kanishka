@@ -27,8 +27,13 @@ body {
     padding-bottom: 1vw;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 12vh;
+}
+
 body {
-    cursor: url('assets/pointer.png') 16 16, auto;
+    cursor: url('assets/pointer2.png') 16 16, auto;
 }
 
 a:hover {
@@ -59,7 +64,7 @@ a:hover {
 }
 
 #yellow {
-    color: #FFFF09;
+    color: #FFD300;
     font-family: 'Ki-Regular', Helvetica, sans-serif;
     font-size: 1.5rem;
     line-height: normal;
@@ -155,32 +160,93 @@ a:hover {
 #dog {
     top: 7%;
     left: 7%;
-    transform: scale(0.8) rotate(-10deg);
 }
 
 #statue {
     top: 17%;
     right: 0%;
-    transform: scale(0.7) rotate(-10deg);
 }
 
 #andromeda {
     bottom: -2%;
     left: 22%;
-    transform: scale(1) rotate(35deg);
 }
 
 #dog:hover {
-    transform: scale(0.8) rotate(0deg);
+    animation: none;
+    transform: scale(0.8) rotate(-10deg);
 }
 
 #statue:hover {
-    transform: scale(0.7) rotate(0deg);
+    animation: none;
+    transform: scale(0.7) rotate(-10deg);
 }
 
 #andromeda:hover {
-    transform: scale(1) rotate(25deg);
+    animation: none;
+    transform: scale(1) rotate(35deg);
 }
+
+@keyframes float1 {
+    0% {
+        transform: scale(0.8) rotate(-10deg) translateY(0px);
+    }
+
+    50% {
+        transform: scale(0.8) rotate(-5deg) translateY(-10px);
+    }
+
+    100% {
+        transform: scale(0.8) rotate(-10deg) translateY(0px);
+    }
+}
+
+@keyframes float2 {
+    0% {
+        transform: scale(0.7) rotate(-10deg) translateY(0px);
+    }
+
+    50% {
+        transform: scale(0.7) rotate(-2deg) translateY(10px);
+    }
+
+    100% {
+        transform: scale(0.7) rotate(-10deg) translateY(0px);
+    }
+}
+
+@keyframes float3 {
+    0% {
+        transform: scale(1) rotate(35deg) translateY(0px);
+    }
+
+    50% {
+        transform: scale(1) rotate(30deg) translateY(-8px);
+    }
+
+    100% {
+        transform: scale(1) rotate(35deg) translateY(0px);
+    }
+}
+
+#dog {
+    top: 7%;
+    left: 7%;
+    animation: float1 3s ease-in-out infinite;
+}
+
+#statue {
+    top: 17%;
+    right: 0%;
+    animation: float2 3.5s ease-in-out infinite;
+}
+
+#andromeda {
+    bottom: -2%;
+    left: 22%;
+    animation: float3 3s ease-in-out infinite;
+}
+
 
 a {
     text-decoration: none;
@@ -189,7 +255,7 @@ a {
 }
 
 .yellow {
-    color: #FFFF09;
+    color: #FFD300;
     font-family: 'Ki-Regular', Helvetica, sans-serif;
     font-size: 1.5rem;
     line-height: normal;
@@ -248,6 +314,7 @@ body {
     align-items: center;
 }
 
+.carousel,
 .carousel1,
 .carousel2 {
     width: 100%;
@@ -283,7 +350,7 @@ body {
 .left-caption {
     left: 1vw;
     top: 60vh;
-    width: 50vw;
+    width: 40vw;
 }
 
 .right-caption {
@@ -291,6 +358,13 @@ body {
     top: 60vh;
     width: 50vw;
     text-align: right;
+}
+
+.project-captions {
+    position: fixed;
+    top: 10vw;
+    left: 6vw;
+    z-index: 2000;
 }
 
 #break {
@@ -318,4 +392,44 @@ body.writing {
 .links {
     line-height: 200%;
     width: 50vw;
+}
+
+/* about */
+
+.about {
+    color: black;
+}
+
+.aboutnavbar {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 95%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    padding: 3vw 2vw 1vw 2vw;
+    font-size: 1.5rem;
+}
+
+.aboutbody {
+    width: 100vw;
+    position: fixed;
+}
+
+body.aboutbody::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50vw;
+    height: 100vh;
+    background-color: black;
+    z-index: -1;
+    /* So it stays behind your content */
+}
+
+body.aboutbody {
+    background-color: white;
+    /* The other half */
 }

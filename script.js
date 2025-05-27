@@ -7,7 +7,7 @@ window.addEventListener("load", function () {
 });
 
 
-// PROJECT 1
+// PROJECT
 const wrapper = document.getElementById('imageWrapper');
 const image = document.getElementById('carouselImage');
 const prevArrow = document.getElementById('prevArrow');
@@ -101,8 +101,70 @@ function changeSlide(direction) {
 }
 
 
+// PROJECT 1
+
+const wrapper1 = document.getElementById('imageWrapper1');
+const image1 = document.getElementById('carouselImage1');
+const prevArrow1 = document.getElementById('prevArrow1');
+const nextArrow1 = document.getElementById('nextArrow1');
+const leftCaption1 = document.getElementById('leftCaption1');
+const rightCaption1 = document.getElementById('rightCaption1');
+
+const images1 = [
+    "../raw1/Kanishka_01.png"
+];
+
+const captions1 = [
+    { left: "Untitled, 2024", right: "Medium" },
+];
+
+let currentIndex1 = 0;
+
+wrapper1.addEventListener('mousemove', (e) => {
+    const rect = image1.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const isLeft = x < rect.width / 2;
+
+    const arrow = isLeft ? prevArrow1 : nextArrow1;
+    arrow.style.left = `${x}px`;
+    arrow.style.top = `${y}px`;
+    arrow.style.opacity = 1;
+
+    (isLeft ? nextArrow1 : prevArrow1).style.opacity = 0;
+});
+
+wrapper1.addEventListener('mouseleave', () => {
+    prevArrow1.style.opacity = 0;
+    nextArrow1.style.opacity = 0;
+});
+
+prevArrow1.addEventListener('click', (e) => {
+    e.stopPropagation();
+    changeSlide1(-1);
+});
+
+nextArrow1.addEventListener('click', (e) => {
+    e.stopPropagation();
+    changeSlide1(1);
+});
+
+function changeSlide1(direction) {
+    currentIndex1 += direction;
+
+    if (currentIndex1 < 0) {
+        currentIndex1 = images1.length - 1;
+    } else if (currentIndex1 >= images1.length) {
+        currentIndex1 = 0;
+    }
+
+    image1.src = images1[currentIndex1];
+    leftCaption1.textContent = captions1[currentIndex1].left;
+    rightCaption1.textContent = captions1[currentIndex1].right;
+}
+
+
 // PROJECT 2
-// === PROJECT 2 ===
 
 const wrapper2 = document.getElementById('imageWrapper2');
 const image2 = document.getElementById('carouselImage2');
@@ -112,14 +174,14 @@ const leftCaption2 = document.getElementById('leftCaption2');
 const rightCaption2 = document.getElementById('rightCaption2');
 
 const images2 = [
-    "../raw2/Kanishka_Kanishka_01.jpg",
+    "../raw2/Kanishka_Kanishka_08.jpg",
     "../raw2/Kanishka_Kanishka_02.jpg",
     "../raw2/Kanishka_Kanishka_03.jpg",
     "../raw2/Kanishka_Kanishka_04.jpg",
     "../raw2/Kanishka_Kanishka_05.jpg",
-    "../raw2/Kanishka_Kanishka_06.png",
+    "../raw2/Kanishka_Kanishka_06.jpg",
     "../raw2/Kanishka_Kanishka_07.jpg",
-    "../raw2/Kanishka_Kanishka_08.jpg"
+    "../raw2/Kanishka_Kanishka_01.jpg"
 ];
 
 const captions2 = [
