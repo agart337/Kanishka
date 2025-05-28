@@ -239,3 +239,113 @@ function changeSlide2(direction) {
     leftCaption2.textContent = captions2[currentIndex2].left;
     rightCaption2.textContent = captions2[currentIndex2].right;
 }
+
+// PROJECT 3
+
+const wrapper3 = document.getElementById('imageWrapper3');
+const image3 = document.getElementById('carouselImage3');
+const prevArrow3 = document.getElementById('prevArrow3');
+const nextArrow3 = document.getElementById('nextArrow3');
+const leftCaption3 = document.getElementById('leftCaption3');
+const rightCaption3 = document.getElementById('rightCaption3');
+
+const images3 = [
+    "../raw3/Paris18.jpeg",
+    "../raw3/Paris1.jpeg",
+    "../raw3/Paris2.jpeg",
+    "../raw3/Paris3.jpeg",
+    "../raw3/Paris4.jpeg",
+    "../raw3/Paris6.jpeg",
+    "../raw3/Paris8.jpeg",
+    "../raw3/Paris9.jpeg",
+    "../raw3/Paris11.jpeg",
+    "../raw3/Paris12.jpeg",
+    "../raw3/Paris13.jpeg",
+    "../raw3/Paris15.jpeg",
+    "../raw3/Paris16.jpeg",
+    "../raw3/Paris17.jpeg",
+    "../raw3/Paris19.jpeg",
+    "../raw3/Paris20.jpeg",
+    "../raw3/Paris21.jpeg",
+    "../raw3/Paris22.jpeg",
+    "../raw3/Paris26.jpeg",
+    "../raw3/Paris27.jpeg",
+    "../raw3/Paris28.jpeg",
+    "../raw3/Paris29.jpeg",
+    "../raw3/Paris33.jpeg",
+    "../raw3/Paris35.jpeg",
+    "../raw3/Paris36.jpeg"
+];
+
+const captions3 = [
+    { left: "Untitled, 2024", right: "Medium" },
+    { left: "Untitled, 2024", right: "Medium" },
+    { left: "Untitled, 2024", right: "Medium" },
+    { left: "Untitled, 2024", right: "Medium" },
+    { left: "Untitled, 2024", right: "Medium" },
+    { left: "Untitled, 2024", right: "Medium" },
+    { left: "Untitled, 2024", right: "Medium" },
+    { left: "Untitled, 2024", right: "Medium" },
+    { left: "Untitled, 2024", right: "Medium" },
+    { left: "Untitled, 2024", right: "Medium" },
+    { left: "Untitled, 2024", right: "Medium" },
+    { left: "Untitled, 2024", right: "Medium" },
+    { left: "Untitled, 2024", right: "Medium" },
+    { left: "Untitled, 2024", right: "Medium" },
+    { left: "Untitled, 2024", right: "Medium" },
+    { left: "Untitled, 2024", right: "Medium" },
+    { left: "Untitled, 2024", right: "Medium" },
+    { left: "Untitled, 2024", right: "Medium" },
+    { left: "Untitled, 2024", right: "Medium" },
+    { left: "Untitled, 2024", right: "Medium" },
+    { left: "Untitled, 2024", right: "Medium" },
+    { left: "Untitled, 2024", right: "Medium" },
+    { left: "Untitled, 2024", right: "Medium" },
+    { left: "Untitled, 2024", right: "Medium" },
+    { left: "Untitled, 2024", right: "Medium" }
+];
+
+let currentIndex3 = 0;
+
+wrapper3.addEventListener('mousemove', (e) => {
+    const rect = image3.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const isLeft = x < rect.width / 2;
+
+    const arrow = isLeft ? prevArrow3 : nextArrow3;
+    arrow.style.left = `${x}px`;
+    arrow.style.top = `${y}px`;
+    arrow.style.opacity = 1;
+
+    (isLeft ? nextArrow3 : prevArrow3).style.opacity = 0;
+});
+
+wrapper3.addEventListener('mouseleave', () => {
+    prevArrow3.style.opacity = 0;
+    nextArrow3.style.opacity = 0;
+});
+
+prevArrow3.addEventListener('click', (e) => {
+    e.stopPropagation();
+    changeSlide3(-1);
+});
+
+nextArrow3.addEventListener('click', (e) => {
+    e.stopPropagation();
+    changeSlide3(1);
+});
+
+function changeSlide3(direction) {
+    currentIndex3 += direction;
+
+    if (currentIndex3 < 0) {
+        currentIndex3 = images3.length - 1;
+    } else if (currentIndex3 >= images3.length) {
+        currentIndex3 = 0;
+    }
+
+    image3.src = images3[currentIndex3];
+    leftCaption3.textContent = captions3[currentIndex3].left;
+    rightCaption3.textContent = captions3[currentIndex3].right;
+}

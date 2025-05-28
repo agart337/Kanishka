@@ -32,12 +32,13 @@ html {
     scroll-padding-top: 12vh;
 }
 
-body {
+body,
+a {
     cursor: url('assets/pointer2.png') 16 16, auto;
 }
 
 a:hover {
-    cursor: url('assets/pointer.png') 16 16, auto;
+    cursor: url('assets/pointer2.png') 16 16, auto;
     text-decoration: underline;
 }
 
@@ -305,7 +306,7 @@ body {
 
 .image-placeholder {
     position: relative;
-    width: 90vw;
+    width: 80vw;
     height: 80vh;
     margin: 0vh auto;
     overflow: hidden;
@@ -316,12 +317,31 @@ body {
 
 .carousel,
 .carousel1,
-.carousel2 {
+.carousel2,
+.carousel3 {
     width: 100%;
     height: 100%;
     object-fit: contain;
     display: block;
 }
+
+/* project 1 bg */
+#project::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    opacity: 60%;
+    background-image: url('edited/trace.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    z-index: -1;
+}
+
 
 /* --- Arrows --- */
 .arrow {
@@ -361,9 +381,10 @@ body {
 }
 
 .project-captions {
+    size: 1rem;
     position: fixed;
-    top: 10vw;
-    left: 6vw;
+    top: 7vw;
+    left: 2vw;
     z-index: 2000;
 }
 
@@ -372,7 +393,7 @@ body {
 }
 
 .break {
-    height: 30vh;
+    height: 20vh;
 }
 
 /* writing page */
@@ -401,6 +422,7 @@ body.writing {
 }
 
 .aboutnavbar {
+    color: black;
     position: relative;
     top: 0;
     left: 0;
@@ -415,21 +437,4 @@ body.writing {
 .aboutbody {
     width: 100vw;
     position: fixed;
-}
-
-body.aboutbody::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 50vw;
-    height: 100vh;
-    background-color: black;
-    z-index: -1;
-    /* So it stays behind your content */
-}
-
-body.aboutbody {
-    background-color: white;
-    /* The other half */
 }
