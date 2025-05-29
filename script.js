@@ -113,11 +113,17 @@ const leftCaption1 = document.getElementById('leftCaption1');
 const rightCaption1 = document.getElementById('rightCaption1');
 
 const images1 = [
-    "../raw1/Kanishka_01.png"
+    "../raw1/Kanishka_01.png",
+    "../raw1/Kanishka_02.jpg",
+    "../raw1/Kanishka_03.jpeg",
+    "../raw1/Kanishka_04.jpeg"
 ];
 
 const captions1 = [
     { left: "Untitled, 2024", right: "Medium" },
+    { left: "Untitled, 2024", right: "Medium" },
+    { left: "Untitled, 2024", right: "Medium" },
+    { left: "Untitled, 2024", right: "Medium" }
 ];
 
 let currentIndex1 = 0;
@@ -325,5 +331,3 @@ function changeSlide3(direction) {
     leftCaption3.textContent = captions3[currentIndex3].left;
     rightCaption3.textContent = captions3[currentIndex3].right;
 }
-
-// WRITING WRITING WRITING WRITING WRITING WRITING WRITING WRITING WRITING
