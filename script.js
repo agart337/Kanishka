@@ -7,6 +7,8 @@ window.addEventListener("load", function () {
 });
 
 
+// PHOTOGRAPHY PHOTOGRAPHY PHOTOGRAPHY PHOTOGRAPHY PHOTOGRAPHY
+
 // PROJECT
 const wrapper = document.getElementById('imageWrapper');
 const image = document.getElementById('carouselImage');
@@ -250,47 +252,21 @@ const leftCaption3 = document.getElementById('leftCaption3');
 const rightCaption3 = document.getElementById('rightCaption3');
 
 const images3 = [
-    "../raw3/Paris18.jpeg",
-    "../raw3/Paris1.jpeg",
-    "../raw3/Paris2.jpeg",
-    "../raw3/Paris3.jpeg",
-    "../raw3/Paris4.jpeg",
-    "../raw3/Paris6.jpeg",
-    "../raw3/Paris8.jpeg",
-    "../raw3/Paris9.jpeg",
-    "../raw3/Paris11.jpeg",
-    "../raw3/Paris12.jpeg",
-    "../raw3/Paris13.jpeg",
-    "../raw3/Paris15.jpeg",
-    "../raw3/Paris16.jpeg",
-    "../raw3/Paris17.jpeg",
-    "../raw3/Paris19.jpeg",
-    "../raw3/Paris20.jpeg",
-    "../raw3/Paris21.jpeg",
-    "../raw3/Paris22.jpeg",
-    "../raw3/Paris26.jpeg",
-    "../raw3/Paris27.jpeg",
-    "../raw3/Paris28.jpeg",
-    "../raw3/Paris29.jpeg",
-    "../raw3/Paris33.jpeg",
-    "../raw3/Paris35.jpeg",
-    "../raw3/Paris36.jpeg"
+    "../raw3/Paris.jpg",
+    "../raw3/Paris1.jpg",
+    "../raw3/Paris2.jpg",
+    "../raw3/Paris3.jpg",
+    "../raw3/Paris8.jpg",
+    "../raw3/Paris13.jpg",
+    "../raw3/Paris18.jpg",
+    "../raw3/Paris19.jpg",
+    "../raw3/Paris21.jpg",
+    "../raw3/Paris26.jpg",
+    "../raw3/Paris29.jpg",
+    "../raw3/Paris35.jpg"
 ];
 
 const captions3 = [
-    { left: "Untitled, 2024", right: "Medium" },
-    { left: "Untitled, 2024", right: "Medium" },
-    { left: "Untitled, 2024", right: "Medium" },
-    { left: "Untitled, 2024", right: "Medium" },
-    { left: "Untitled, 2024", right: "Medium" },
-    { left: "Untitled, 2024", right: "Medium" },
-    { left: "Untitled, 2024", right: "Medium" },
-    { left: "Untitled, 2024", right: "Medium" },
-    { left: "Untitled, 2024", right: "Medium" },
-    { left: "Untitled, 2024", right: "Medium" },
-    { left: "Untitled, 2024", right: "Medium" },
-    { left: "Untitled, 2024", right: "Medium" },
-    { left: "Untitled, 2024", right: "Medium" },
     { left: "Untitled, 2024", right: "Medium" },
     { left: "Untitled, 2024", right: "Medium" },
     { left: "Untitled, 2024", right: "Medium" },
@@ -349,3 +325,5 @@ function changeSlide3(direction) {
     leftCaption3.textContent = captions3[currentIndex3].left;
     rightCaption3.textContent = captions3[currentIndex3].right;
 }
+
+// WRITING WRITING WRITING WRITING WRITING WRITING WRITING WRITING WRITING

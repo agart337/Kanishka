@@ -306,8 +306,8 @@ body {
 
 .image-placeholder {
     position: relative;
-    width: 80vw;
-    height: 80vh;
+    width: 83vw;
+    height: 75vh;
     margin: 0vh auto;
     overflow: hidden;
     display: flex;
@@ -331,9 +331,9 @@ body {
     position: absolute;
     top: 0;
     right: 0;
-    width: 100vw;
+    width: 75vw;
     height: 100vh;
-    opacity: 60%;
+    opacity: 40%;
     background-image: url('edited/trace.jpg');
     background-size: cover;
     background-position: center;
@@ -361,11 +361,19 @@ body {
 
 /* --- Captions --- */
 .caption {
+    z-index: 10;
+    display: inline-block;
     position: absolute;
     font-size: 1rem;
     font-family: 'Ki-Regular', monospace, sans-serif;
     line-height: 140%;
+    transition: filter 0.3s ease;
 }
+
+.caption:hover {
+    filter: blur(3px) !important;
+}
+
 
 .left-caption {
     left: 1vw;
@@ -389,7 +397,7 @@ body {
 }
 
 #break {
-    height: 10vh;
+    height: 12vh;
 }
 
 .break {
@@ -405,14 +413,51 @@ body.writing {
     font-family: 'Ki-Regular', monospace, sans-serif;
 }
 
-.articles {
-    margin: 0;
-    padding: 10vw;
+.grid1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0vw;
+    height: 100vh;
 }
 
-.links {
+.articles,
+.sticker {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.articles {
+    margin: 0;
+    padding: 0vw 6vw 0vw 6vw;
     line-height: 200%;
-    width: 50vw;
+}
+
+.sticker {}
+
+
+.column1 {
+    background-image: url('edited/image1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.column2 {
+    position: relative;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
 }
 
 /* about */
