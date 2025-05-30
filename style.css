@@ -445,21 +445,19 @@ body.writing {
 
 #stickerPreview {
     opacity: 0;
-    transform: scale(0.8);
+    transform: scale(1);
     transition: opacity 0.4s ease, transform 0.4s ease;
     display: block;
-    /* always block for transitions to work */
     pointer-events: none;
     position: fixed;
     top: 50%;
     left: 73%;
     transform: translate(-50%, -50%) scale(0.8);
     z-index: 999;
-    max-width: 24vw;
-    max-height: 16vw;
+    max-width: 27vw;
+    max-height: 18vw;
 }
 
-/* When active (hovered) */
 #stickerPreview.active {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
@@ -509,6 +507,10 @@ body.writing {
     padding-top: 1.8vw;
 }
 
+.subtitle:hover {
+    color: #195bff;
+}
+
 p {
     font-size: 1rem;
     font-family: 'Ki-Regular', monospace, sans-serif;
@@ -518,4 +520,8 @@ p {
 
 .links {
     text-decoration: underline;
+}
+
+.links a:hover {
+    color: #FFD300;
 }
