@@ -85,7 +85,7 @@ a:hover {
 }
 
 #blue {
-    color: rgba(0, 18, 255, 0.85);
+    color: #195bff;
     font-family: 'Ki-Regular', Helvetica, sans-serif;
     font-size: 1.5rem;
     line-height: normal;
@@ -269,7 +269,7 @@ a {
 }
 
 .blue {
-    color: rgba(0, 18, 255, 0.85);
+    color: #195bff;
     font-family: 'Ki-Regular', Helvetica, sans-serif;
     font-size: 1.5rem;
     line-height: normal;
@@ -374,7 +374,7 @@ body {
 /* --- Captions --- */
 
 .project-captions {
-    font-size: 0.9rem;
+    font-size: 1rem;
     position: fixed;
     top: 8vw;
     left: 2vw;
@@ -524,4 +524,134 @@ p {
 
 .links a:hover {
     color: #FFD300;
+}
+
+@media (max-width: 450px) {
+    .grid {
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: 50vh 50vh;
+    }
+
+    .column1,
+    .column2 {
+        width: 100%;
+        height: 50vh;
+    }
+
+    #dog {
+        top: 20%;
+        left: 15%;
+        scale: 3;
+    }
+
+    #statue {
+        top: 15%;
+        right: 10%;
+        scale: 3;
+    }
+
+    #andromeda {
+        bottom: 5%;
+        left: 22%;
+        scale: 3;
+    }
+
+    .navbar .right,
+    .aboutnavbar .right {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .project-captions {
+        top: 9vh;
+        line-height: 180%;
+    }
+
+    .image-placeholder {
+        position: relative;
+        width: 85vw;
+        height: 80vh;
+        margin: 0vh auto;
+        overflow: hidden;
+        display: flex;
+        justify-content: right;
+        align-items: flex-end;
+    }
+
+    .right-caption {
+        top: 70vh;
+        width: 100vw;
+        line-height: 180%;
+    }
+
+    .break {
+        height: 4vh;
+    }
+
+    .articles {
+        margin: 0;
+        top: 20vh;
+        padding: 9vh 7.5vw;
+        line-height: 180%;
+        width: 90vw;
+    }
+
+    .stickers {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    #stickerPreview {
+        opacity: 0;
+        transform: scale(1);
+        transition: opacity 0.4s ease, transform 0.4s ease;
+        display: block;
+        pointer-events: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.8);
+        z-index: 999;
+        max-width: 80vw;
+        max-height: 50vh;
+    }
+
+    #stickerPreview.active {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    .grid2 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .left-column,
+    .right-column {
+        width: 100%;
+        padding: 1rem 0;
+        flex-basis: 100%;
+        overflow: auto;
+    }
+
+
+    .right {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .aboutlink {
+        margin-bottom: 1rem;
+    }
+
+    .subtitle {
+        padding-left: 1vh;
+    }
+
+    p {
+        padding-left: 3vh;
+    }
 }
