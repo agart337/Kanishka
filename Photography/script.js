@@ -211,15 +211,16 @@ const images2 = [
 ];
 
 const captions2 = [
-    ["Untitled.", "Description4.", "Date."],
-    ["Untitled.", "Description9.", "Date."],
-    ["Untitled.", "Description2.", "Date."],
-    ["Untitled.", "Description3.", "Date."],
-    ["Untitled.", "Description8.", "Date."],
-    ["Untitled.", "Description5.", "Date."],
-    ["Untitled.", "Description6.", "Date."],
-    ["Untitled.", "Description7.", "Date."],
-    ["Untitled.", "Description1.", "Date."]
+    ["Point of Origin - II", "Archival Inkjet Print on Bamboo Paper", "2024"],
+    ["Human Codes", "Archival Inkjet Print on Bamboo Paper", "2024"],
+    ["When did it arrive here", "Archival Inkjet Print on Bamboo Paper", "2024"],
+    ["Untitled", "Archival Inkjet Print on Bamboo Paper", "2024"],
+    ["Performing Futility", "Archival Inkjet Print on Bamboo Paper", "2024"],
+    ["Untitled", "Archival Inkjet Print on Bamboo Paper", "2024"],
+    ["Untitled", "Archival Inkjet Print on Bamboo Paper", "2024"],
+    ["Untitled", "Archival Inkjet Print on Bamboo Paper", "2024"],
+    ["Untitled", "Archival Inkjet Print on Bamboo Paper", "2024"],
+
 ];
 
 let currentIndex2 = 0;
@@ -280,7 +281,6 @@ const wrapper3 = document.getElementById('imageWrapper3');
 const image3 = document.getElementById('carouselImage3');
 const prevArrow3 = document.getElementById('prevArrow3');
 const nextArrow3 = document.getElementById('nextArrow3');
-const rightCaption3 = document.getElementById('rightCaption3');
 
 const images3 = [
     "../raw3/Paris.jpg",
@@ -297,30 +297,7 @@ const images3 = [
     "../raw3/Paris35.jpg"
 ];
 
-const captions3 = [
-    ["Untitled.", "Description.", "Date."],
-    ["Untitled.", "Description1.", "Date."],
-    ["Untitled.", "Description2.", "Date."],
-    ["Untitled.", "Description3.", "Date."],
-    ["Untitled.", "Description8.", "Date."],
-    ["Untitled.", "Description13.", "Date."],
-    ["Untitled.", "Description18.", "Date."],
-    ["Untitled.", "Description19.", "Date."],
-    ["Untitled.", "Description21.", "Date."],
-    ["Untitled.", "Description26.", "Date."],
-    ["Untitled.", "Description29.", "Date."],
-    ["Untitled.", "Description35.", "Date."]
-];
-
 let currentIndex3 = 0;
-
-function updateCaptions3(index) {
-    rightCaption3.innerHTML = `
-        <div>${captions3[index][0]}</div>
-        <div>${captions3[index][1]}</div>
-        <div>${captions3[index][2]}</div>
-    `;
-}
 
 function changeSlide3(direction) {
     currentIndex3 += direction;

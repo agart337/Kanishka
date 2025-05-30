@@ -381,20 +381,12 @@ body {
     color: #FFD300;
 }
 
-
 .caption {
     display: inline-block;
     position: absolute;
     font-size: 1rem;
     font-family: 'Ki-Regular', monospace, sans-serif;
     line-height: 200%;
-}
-
-
-.left-column {
-    left: 1vw;
-    top: 60vh;
-    width: 40vw;
 }
 
 .right-caption {
@@ -434,7 +426,7 @@ body.writing {
 
 .articles {
     margin: 0;
-    padding: 10vw 6vw 0vw 6vw;
+    padding: 8vw 6vw 0vw 6vw;
     line-height: 200%;
     width: 44vw;
 }
@@ -471,10 +463,6 @@ body.writing {
 
 /* about */
 
-.about {
-    color: black;
-}
-
 .aboutnavbar {
     color: black;
     position: relative;
@@ -488,7 +476,24 @@ body.writing {
     font-size: 1.5rem;
 }
 
-.aboutbody {
-    width: 100vw;
-    position: fixed;
+.grid2 {
+    color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2vw;
+    height: 100vh;
+}
+
+.left-column,
+.right-column {
+    margin: 0;
+    padding-left: 6vw;
+    display: flex;
+    height: 100vh;
+}
+
+.left-column {
+    left: 1vw;
+    top: 60vh;
+    width: 40vw;
 }
