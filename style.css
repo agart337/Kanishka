@@ -298,6 +298,12 @@ body.photo {
 }
 
 /* --- Image Placeholder --- */
+
+/* .project0,
+.project1,
+.project2,
+.project3 */
+
 body {
     margin: 0;
     color: white;
@@ -306,13 +312,13 @@ body {
 
 .image-placeholder {
     position: relative;
-    width: 83vw;
-    height: 75vh;
+    width: 96vw;
+    height: 70vh;
     margin: 0vh auto;
     overflow: hidden;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: right;
+    align-items: flex-end;
 }
 
 .carousel,
@@ -325,15 +331,15 @@ body {
     display: block;
 }
 
-/* project 1 bg */
-#project::after {
+/* project0 bg */
+#project0::after {
     content: "";
     position: absolute;
     top: 0;
     right: 0;
     width: 75vw;
     height: 100vh;
-    opacity: 40%;
+    opacity: 25%;
     background-image: url('edited/trace.jpg');
     background-size: cover;
     background-position: center;
@@ -357,25 +363,35 @@ body {
     z-index: 5;
     transform: translate(-50%, -50%);
     cursor: none;
+    scale: 0.7;
 }
 
 /* --- Captions --- */
+
+.project-captions {
+    font-size: 0.9rem;
+    position: fixed;
+    top: 8vw;
+    left: 2vw;
+    z-index: 2000;
+    line-height: 200%;
+}
+
+.project-caption.highlighted a {
+    color: #FFD300;
+}
+
+
 .caption {
-    z-index: 10;
     display: inline-block;
     position: absolute;
     font-size: 1rem;
     font-family: 'Ki-Regular', monospace, sans-serif;
-    line-height: 140%;
-    transition: filter 0.3s ease;
-}
-
-.caption:hover {
-    filter: blur(3px) !important;
+    line-height: 200%;
 }
 
 
-.left-caption {
+.left-column {
     left: 1vw;
     top: 60vh;
     width: 40vw;
@@ -383,21 +399,17 @@ body {
 
 .right-caption {
     right: 1vw;
-    top: 60vh;
+    top: 59vh;
     width: 50vw;
     text-align: right;
 }
 
-.project-captions {
-    size: 1rem;
-    position: fixed;
-    top: 7vw;
-    left: 2vw;
-    z-index: 2000;
+.right-caption div {
+    display: block;
 }
 
 #break {
-    height: 12vh;
+    height: 15vh;
 }
 
 .break {
