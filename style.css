@@ -32,6 +32,11 @@ html {
     scroll-padding-top: 12vh;
 }
 
+body.landingpage,
+body.writing {
+    overflow-x: hidden;
+}
+
 body,
 a {
     cursor: url('assets/pointer2.png') 16 16, auto;
@@ -169,7 +174,7 @@ a:hover {
 }
 
 #andromeda {
-    bottom: -2%;
+    bottom: 0%;
     left: 22%;
 }
 
@@ -426,7 +431,7 @@ body.writing {
 
 .articles {
     margin: 0;
-    padding: 8vw 6vw 0vw 6vw;
+    padding: 8vw 4vw 0vw 4vw;
     line-height: 200%;
     width: 44vw;
 }
@@ -447,7 +452,7 @@ body.writing {
     pointer-events: none;
     position: fixed;
     top: 50%;
-    left: 71%;
+    left: 73%;
     transform: translate(-50%, -50%) scale(0.8);
     z-index: 999;
     max-width: 24vw;
@@ -476,24 +481,41 @@ body.writing {
     font-size: 1.5rem;
 }
 
+#space {
+    line-height: 200%;
+}
+
 .grid2 {
     color: black;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2vw;
+    gap: 4vw;
     height: 100vh;
+    padding-left: 4vw;
+    padding-right: 4vw;
 }
 
 .left-column,
 .right-column {
-    margin: 0;
-    padding-left: 6vw;
     display: flex;
+    align-items: flex-start;
     height: 100vh;
 }
 
-.left-column {
-    left: 1vw;
-    top: 60vh;
-    width: 40vw;
+.subtitle {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-family: 'Ki-Regular', monospace, sans-serif;
+    padding-top: 1.8vw;
+}
+
+p {
+    font-size: 1rem;
+    font-family: 'Ki-Regular', monospace, sans-serif;
+    line-height: 200%;
+    padding-left: 2vw;
+}
+
+.links {
+    text-decoration: underline;
 }
