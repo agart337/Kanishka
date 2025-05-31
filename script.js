@@ -7,6 +7,14 @@ window.addEventListener("load", function () {
 });
 
 // PHOTOGRAPHY TYPEWRITER
+
+document.addEventListener("DOMContentLoaded", function () {
+    const element = document.getElementById("typewriter-text");
+    const text = "Everything Reminds Me of You"; // Replace with your desired message
+    typewriterEffect(element, text);
+});
+
+
 // // PROJECT 0
 function updateCaptions(index) {
     rightCaption.innerHTML = ""; // Clear existing captions

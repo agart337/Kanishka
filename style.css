@@ -625,26 +625,16 @@ p {
     }
 
     .grid2 {
-        display: flex;
-        flex-direction: column;
+        grid-template-columns: 1fr;
     }
 
     .left-column,
     .right-column {
         width: 100%;
-        padding: 1rem 0;
-        flex-basis: 100%;
-        overflow: auto;
     }
 
-
-    .right {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-
-    .aboutlink {
-        margin-bottom: 1rem;
+    .right-column {
+        margin-top: 70rem;
     }
 
     .subtitle {
