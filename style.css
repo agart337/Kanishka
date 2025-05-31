@@ -527,6 +527,23 @@ p {
 }
 
 @media (max-width: 450px) {
+
+    #landing-page {
+
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: black;
+        z-index: 9999;
+        opacity: 1;
+
+        align-items: center;
+        justify-content: center;
+        transition: opacity 2.5s ease;
+        pointer-events: none;
+    }
+
     .grid {
         display: grid;
         grid-template-columns: none;
@@ -564,7 +581,7 @@ p {
     }
 
     .project-captions {
-        top: 9vh;
+        top: 11vh;
         line-height: 180%;
     }
 
@@ -580,7 +597,7 @@ p {
     }
 
     .right-caption {
-        top: 70vh;
+        top: 66vh;
         width: 100vw;
         line-height: 180%;
     }
@@ -592,7 +609,7 @@ p {
     .articles {
         margin: 0;
         top: 20vh;
-        padding: 9vh 7.5vw;
+        padding: 11vh 7.5vw;
         line-height: 180%;
         width: 90vw;
     }
