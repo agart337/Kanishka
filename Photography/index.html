@@ -8,6 +8,8 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../style.css">
+     <script src="script.js" defer></script>
+
 </head>
 
 <body class="photo">
@@ -109,39 +111,6 @@
     </div>
 
     <div id="break"></div>
-    <script src="script.js" async defer></script>
-    <script src="../script.js" async defer>
-        document.addEventListener("DOMContentLoaded", function () { });
-    </script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const projectSections = [
-                document.getElementById("project0"),
-                document.getElementById("project1"),
-                document.getElementById("project2"),
-                document.getElementById("project3")
-            ];
-
-            const captions = document.querySelectorAll(".project-caption");
-
-            function highlightVisibleCaption() {
-                const scrollPos = window.scrollY + window.innerHeight / 2;
-
-                projectSections.forEach((section, index) => {
-                    const offsetTop = section.offsetTop;
-                    const offsetBottom = offsetTop + section.offsetHeight;
-
-                    if (scrollPos >= offsetTop && scrollPos < offsetBottom) {
-                        captions.forEach(c => c.classList.remove("highlighted"));
-                        captions[index].classList.add("highlighted");
-                    }
-                });
-            }
-            window.addEventListener("scroll", highlightVisibleCaption);
-            highlightVisibleCaption();
-        });
-    </script>
-
 </body>
 
 </html>

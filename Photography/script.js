@@ -1,3 +1,37 @@
+document.addEventListener("DOMContentLoaded", function () {
+            const projectSections = [
+                document.getElementById("project0"),
+                document.getElementById("project1"),
+                document.getElementById("project2"),
+                document.getElementById("project3")
+            ];
+
+            const captions = document.querySelectorAll(".project-caption");
+
+            function highlightVisibleCaption() {
+                const scrollPos = window.scrollY + window.innerHeight / 2;
+
+                projectSections.forEach((section, index) => {
+                    const offsetTop = section.offsetTop;
+                    const offsetBottom = offsetTop + section.offsetHeight;
+
+                    if (scrollPos >= offsetTop && scrollPos < offsetBottom) {
+                        captions.forEach(c => c.classList.remove("highlighted"));
+                        captions[index].classList.add("highlighted");
+                        updateCaptions(0);
+                        updateCaptions1(0);
+                        updateCaptions2(0);
+                        updateCaptions3(0);
+                        
+                    }
+                });
+            }
+            window.addEventListener("scroll", highlightVisibleCaption);
+            highlightVisibleCaption();
+        });
+
+
+
 // PROJECT 0
 
 const wrapper = document.getElementById('imageWrapper');
@@ -53,14 +87,6 @@ function typeWriter(text, element, delay) {
             }
         }, 30); // typing speed
     }, delay);
-}
-
-function updateCaptions(index) {
-    rightCaption.innerHTML = `
-        <div>${captions[index][0]}</div>
-        <div>${captions[index][1]}</div>
-        <div>${captions[index][2]}</div>
-    `;
 }
 
 function changeSlide(direction) {
@@ -139,12 +165,33 @@ const captions1 = [
 
 let currentIndex1 = 0;
 
-function updateCaptions1(index) {
-    rightCaption1.innerHTML = `
-        <div>${captions1[index][0]}</div>
-        <div>${captions1[index][1]}</div>
-        <div>${captions1[index][2]}</div>
-    `;
+function updateCaptions1(index1) {
+    rightCaption1.innerHTML = ""; // Clear existing captions
+
+    const lines = captions1[index1];
+    let totalDelay = 0;
+
+    lines.forEach((line, i) => {
+        const div = document.createElement('div');
+        rightCaption1.appendChild(div);
+        typeWriter1(line, div, totalDelay);
+        totalDelay += line.length * 30 + 300; // Adjust delay for next line (30ms per char + pause)
+    });
+}
+
+
+function typeWriter1(text1, element1, delay1) {
+    let i = 0;
+    setTimeout(() => {
+        const interval = setInterval(() => {
+            if (i < text1.length) {
+                element1.textContent += text1.charAt(i);
+                i++;
+            } else {
+                clearInterval(interval);
+            }
+        }, 30); // typing speed per character
+    }, delay1);
 }
 
 function changeSlide1(direction) {
@@ -225,13 +272,35 @@ const captions2 = [
 
 let currentIndex2 = 0;
 
-function updateCaptions2(index) {
-    rightCaption2.innerHTML = `
-        <div>${captions2[index][0]}</div>
-        <div>${captions2[index][1]}</div>
-        <div>${captions2[index][2]}</div>
-    `;
+// // PROJECT 2
+function updateCaptions2(index2) {
+    rightCaption2.innerHTML = ""; // Clear existing captions
+
+    const lines = captions2[index2];
+    let totalDelay = 0;
+
+    lines.forEach((line, i) => {
+        const div = document.createElement('div');
+        rightCaption2.appendChild(div);
+        typeWriter2(line, div, totalDelay);
+        totalDelay += line.length * 30 + 300; // Adjust delay for next line (30ms per char + pause)
+    });
 }
+
+function typeWriter2(text2, element2, delay2) {
+    let i = 0;
+    setTimeout(() => {
+        const interval = setInterval(() => {
+            if (i < text2.length) {
+                element2.textContent += text2.charAt(i);
+                i++;
+            } else {
+                clearInterval(interval);
+            }
+        }, 30); // typing speed per character
+    }, delay2);
+}
+
 
 function changeSlide2(direction) {
     currentIndex2 += direction;
@@ -298,6 +367,37 @@ const images3 = [
 ];
 
 let currentIndex3 = 0;
+
+// // PROJECT 3
+function updateCaptions3(index3) {
+    rightCaption3.innerHTML = ""; // Clear existing captions
+
+    const lines = captions3[index3];
+    let totalDelay = 0;
+
+    lines.forEach((line, i) => {
+        const div = document.createElement('div');
+        rightCaption3.appendChild(div);
+        typeWriter3(line, div, totalDelay);
+        totalDelay += line.length * 30 + 300; // Adjust delay for next line (30ms per char + pause)
+    });
+}
+
+
+function typeWriter3(text3, element3, delay3) {
+    let i = 0;
+    setTimeout(() => {
+        const interval = setInterval(() => {
+            if (i < text3.length) {
+                element3.textContent += text3.charAt(i);
+                i++;
+            } else {
+                clearInterval(interval);
+            }
+        }, 30); // typing speed per character
+    }, delay3);
+}
+
 
 function changeSlide3(direction) {
     currentIndex3 += direction;
