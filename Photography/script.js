@@ -116,7 +116,7 @@ const nextArrow1 = document.getElementById('nextArrow1');
 const rightCaption1 = document.getElementById('rightCaption1');
 
 const images1 = [
-    "../raw1/Kanishka_01.png",
+    "../raw1/Kanishka_01.jpg",
     "../raw1/Kanishka_02.jpg",
     "../raw1/Kanishka_03.jpg",
     "../raw1/Kanishka_04.jpeg",
@@ -283,17 +283,17 @@ const prevArrow3 = document.getElementById('prevArrow3');
 const nextArrow3 = document.getElementById('nextArrow3');
 
 const images3 = [
-    "../raw3/Paris.jpg",
+    "../raw3/Paris.jpeg",
     "../raw3/Paris1.jpg",
     "../raw3/Paris2.jpg",
     "../raw3/Paris3.jpg",
     "../raw3/Paris8.jpg",
-    "../raw3/Paris13.jpg",
-    "../raw3/Paris18.jpg",
-    "../raw3/Paris19.jpg",
-    "../raw3/Paris21.jpg",
-    "../raw3/Paris26.jpg",
-    "../raw3/Paris29.jpg",
+    "../raw3/Paris13.jpeg",
+    "../raw3/Paris18.jpeg",
+    "../raw3/Paris19.jpeg",
+    "../raw3/Paris21.jpeg",
+    "../raw3/Paris26.jpeg",
+    "../raw3/Paris29.jpeg",
     "../raw3/Paris35.jpg"
 ];
 

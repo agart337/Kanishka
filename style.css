@@ -69,6 +69,11 @@ a:hover {
     opacity: 0;
 }
 
+#landing-page .content {
+    text-align: center;
+    display: inline-block;
+}
+
 #yellow {
     color: #FFD300;
     font-family: 'Ki-Regular', Helvetica, sans-serif;
@@ -651,7 +656,7 @@ p {
     }
 
     .right-column {
-        margin-top: 70rem;
+        margin-top: 63rem;
     }
 
     .subtitle {
@@ -663,9 +668,33 @@ p {
     }
 }
 
+@media (max-width: 420px) {
+    .right-column {
+        margin-top: 71.5rem;
+    }
+
+    #space {
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+        line-height: 150%;
+    }
+}
+
+@media (max-width: 400px) {
+    #landing-page span {
+        font-size: 1.2rem;
+    }
+}
+
 @media (max-width: 390px) {
     .right-column {
-        margin-top: 75rem;
+        margin-top: 76rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .right-column {
+        margin-top: 91.5rem;
     }
 }
 
