@@ -18,10 +18,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     if (scrollPos >= offsetTop && scrollPos < offsetBottom) {
                         captions.forEach(c => c.classList.remove("highlighted"));
                         captions[index].classList.add("highlighted");
-                        updateCaptions(0);
-                        updateCaptions1(0);
-                        updateCaptions2(0);
-                        updateCaptions3(0);
+                        updateCaptions(currentIndex);
+                        updateCaptions1(currentIndex1);
+                        updateCaptions2(currentIndex2);
+                        //updateCaptions3(currentIndex3);
                         
                     }
                 });
@@ -350,6 +350,8 @@ const wrapper3 = document.getElementById('imageWrapper3');
 const image3 = document.getElementById('carouselImage3');
 const prevArrow3 = document.getElementById('prevArrow3');
 const nextArrow3 = document.getElementById('nextArrow3');
+const rightCaption3 = document.getElementById('rightCaption3');
+
 
 const images3 = [
     "../raw3/Paris.jpeg",
@@ -365,7 +367,7 @@ const images3 = [
     "../raw3/Paris29.jpeg",
     "../raw3/Paris35.jpg"
 ];
-
+const captions3 = []; //no captions rn
 let currentIndex3 = 0;
 
 // // PROJECT 3
