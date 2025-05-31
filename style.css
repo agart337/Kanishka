@@ -645,3 +645,15 @@ p {
         padding-left: 3vh;
     }
 }
+
+@media (max-width: 390px) {
+    .right-column {
+        margin-top: 75rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .right-column {
+        margin-top: 89rem;
+    }
+}
