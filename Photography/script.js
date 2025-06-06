@@ -9,23 +9,29 @@ const rightCaption = document.getElementById('rightCaption');
 const images = [
     "../raw/Kanishka_Kanishka_Surrender.jpg",
     "../raw/Kanishka_Kanishka_Takeover.jpg",
+    "../raw/Kanishka_Kanishka_UntitledNew3.jpg",
     "../raw/Kanishka_Kanishka_Birth_Photoetching.jpg",
+    "../raw/Kanishka_Kanishka_WelcomeAlien.jpg",
     "../raw/Kanishka_Kanishka_Labor Veins.jpg",
     "../raw/Kanishka_Kanishka_Mars_Photoetching.jpg",
     "../raw/Kanishka_Kanishka_Slime Mold with Nani.jpg",
     "../raw/Kanishka_Kanishka_Braiding with Algae_Photogram.jpg",
-    "../raw/Kanishka_Kanishka_Interconnected_Photogram with Algae.jpg"
+    "../raw/Kanishka_Kanishka_Interconnected_Photogram with Algae.jpg",
+    "../raw/Kanishka_Kanishka_UntitledNew2.jpeg"
 ];
 
 const captions = [
     ["Untitled, Slime mold on photo rag", "Archival print on photo rag", "2025"],
     ["Untitled, Slime mold on photograph", "Archival print on photo rag", "2025"],
+    ["Untitled, Slime mold on photograph", "Archival print on photo rag", "2025"],
     ["Birth", "Photogravure", "2024"],
+    ["Welcome Alien, Slime mold on photograph", "Archival print on photo rag", "2025"],
     ["Eversion, Slime mold on photograph", "Archival print on photo rag", "2025"],
     ["Uprising on Mars", "Hand painted Photogravure", "2024"],
     ["Stardust, Slime mold on photograph", "Archival print on photo rag", "2025"],
     ["Algae Braid", "Photogram, Algae on silver gelatin paper", "2025"],
-    ["Untitled", "Collage, Photo rag on silver gelatin print", "2025"]
+    ["Untitled", "Collage, Photo rag on silver gelatin print", "2025"],
+    ["Untitled, Slime mold on photograph", "Archival print on photo rag", "2025"]
 ];
 
 let currentIndex = 0;
